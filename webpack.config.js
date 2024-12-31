@@ -49,7 +49,13 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: path.resolve(__dirname, "./src/assets/favicon-dark-16x16.png") }
+        {
+          from: path.posix.join(
+            path.resolve(__dirname, "src/assets").replace(/\\/g, "/"),
+            "favicon_*.png"
+          ),
+          to: "assets/[name][ext]"
+        }
       ]
     })
   ],

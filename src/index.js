@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./js/resize";
+import "./js/favicon";
 
 import App from "./react/App";
 import "./sass/style.scss";
