@@ -1,0 +1,27 @@
+@use "../globals/mixins" as *;
+
+form {
+  position: relative;
+  background: none;
+
+  input[type="email"],
+  input[type="text"] {
+    box-sizing: border-box;
+    position: relative;
+    background: none;
+    border: 1px solid var(--black);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    max-width: 240px;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    // padding: 1rem 2rem;
+    top: 100%;
+    right: 0;
+    display: block;
+  }
+}

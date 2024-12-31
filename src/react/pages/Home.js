@@ -16,6 +16,10 @@ const Home = () => {
         <p className="single-margin">
           If you’d like to be informed once the website is up and running, enter your address below, and we’ll get in touch with you!
         </p>
+        <form method="POST" action="/api/submit" className="single-margin">
+          <input id="email "type="email" name="email" />
+          <button type="submit">SEND →</button>
+        </form>
       </section>
       <div className="logo">
         <span className="outline-text">POMPY</span>

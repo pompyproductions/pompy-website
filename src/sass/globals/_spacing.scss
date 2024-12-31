@@ -22,5 +22,12 @@
   margin-left: var(--page-margin-x);
 }
 .double-margin {
-  margin-left: calc(var(--page-margin-x) * 2);
+  margin-left: var(--page-margin-x);
+  // &.both-margins {
+  //   margin-right: var(--page-margin-x)
+  // }
+  @include break-at("mobile-m") {
+    margin-left: calc(var(--page-margin-x) * 2);
+
+  }
 }
