@@ -1,0 +1,18 @@
+#root {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Rubik", sans-serif;
+  display: grid;
+  grid-template-rows: min-content 1px 1fr;
+  height: var(--doc-height);
+}
+
+header, main {
+  padding: var(--page-margin-y) var(--page-margin-x);
+}
+
+main {
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: var(--page-margin-y);
+}

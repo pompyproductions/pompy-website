@@ -1,0 +1,15 @@
+@use "mixins" as *;
+
+:root {
+  --page-margin-x: 1.4rem;
+  --page-margin-y: 1rem;
+  --padding-x: 1rem;
+  --padding-y: 1rem;
+  --border-radius: .7rem;
+
+  
+  @include break-at("mobile-m") {
+    --page-margin-x: 2rem;
+    --page-margin-y: 1.5rem;
+  }
+}

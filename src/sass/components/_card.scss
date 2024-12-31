@@ -1,0 +1,13 @@
+@use "../globals/mixins" as *;
+
+.card {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--white);
+  padding: var(--padding-y) var(--padding-x);
+  display: grid;
+  grid-auto-rows: min-content;
+
+  @include break-at("mobile-m") {
+    gap: 1rem;
+  }
+}
