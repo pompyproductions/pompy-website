@@ -1,15 +1,26 @@
 @use "mixins" as *;
 
 :root {
-  --page-margin-x: 1.4rem;
-  --page-margin-y: 1rem;
+  --page-margin-x: 20px;
+  --page-margin-y: 0;
   --padding-x: 1rem;
   --padding-y: 1rem;
   --border-radius: .7rem;
+  --gap: 1rem;
 
   
   @include break-at("mobile-m") {
     --page-margin-x: 2rem;
     --page-margin-y: 1.5rem;
   }
+}
+
+// .no-margin {
+//   margin-left: 0;
+// }
+.single-margin {
+  margin-left: var(--page-margin-x);
+}
+.double-margin {
+  margin-left: calc(var(--page-margin-x) * 2);
 }

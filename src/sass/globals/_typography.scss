@@ -53,12 +53,17 @@
 }
 
 h1 {
-  font-family: "Switzer";
-  font-weight: 600;
+  font-family: "General Sans";
+  font-weight: 300;
   font-size: 1.8rem;
+  line-height: 1.1;
   @include break-at("mobile-m") {
     font-size: 2rem;
   }
+}
+
+p {
+  max-width: 600px;
 }
 
 .outline-text {

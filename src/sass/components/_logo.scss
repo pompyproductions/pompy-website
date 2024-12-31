@@ -6,8 +6,17 @@
   justify-items: end;
   line-height: .8;
   cursor: pointer;
+  width: min(100vw, 320px);
+  justify-self: end;
+  overflow: hidden;
 
   & > *:first-child {
     justify-self: start;
   }
+}
+
+#round-logo {
+  max-width: 240px;
+  mix-blend-mode: overlay;
+  margin-bottom: 1rem;
 }

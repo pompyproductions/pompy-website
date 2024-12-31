@@ -1,5 +1,7 @@
 .vsep {
   background-color: currentColor;
-  min-height: 1px;
-  margin: 0 var(--page-margin-x);
+  min-height: 2px;
+  align-self: stretch;
+  mix-blend-mode: overlay;
+  // margin: 0 var(--page-margin-x);
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_3-HAT" data-name="3-HAT" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+    <pattern id="BG" patternUnits="userSpaceOnUse" width="21" height="84">
+      <g id="HATCH">
+        <polygon class="cls-1" points="7 67 0 67 0 70 4 70 4 81 0 81 0 84 21 84 21 81 7 81 7 67"/>
+      </g>
+      <g id="HATCH-2" data-name="HATCH">
+        <path class="cls-1" d="m11,77h10v-24h-10v24m3-21h4v18h-4v-18Z"/>
+      </g>
+      <g id="HATCH-3" data-name="HATCH">
+        <rect y="60" width="7" height="3"/>
+      </g>
+      <g id="HATCH-4" data-name="HATCH">
+        <rect y="53" width="7" height="3"/>
+      </g>
+      <g id="HATCH-5" data-name="HATCH">
+        <rect y="46" width="21" height="3"/>
+      </g>
+      <g id="HATCH-6" data-name="HATCH">
+        <rect x="18" y="4" width="3" height="31"/>
+      </g>
+      <g id="HATCH-7" data-name="HATCH">
+        <polygon class="cls-1" points="7 25 0 25 0 28 4 28 4 39 0 39 0 42 21 42 21 39 7 39 7 25"/>
+      </g>
+      <g id="HATCH-8" data-name="HATCH">
+        <polygon class="cls-1" points="11 35 14 35 14 4 0 4 0 7 4 7 4 18 0 18 0 21 7 21 7 7 11 7 11 35"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#BG)"/>
+</svg>

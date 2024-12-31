@@ -1,21 +1,30 @@
 :root {
   background-color: white;
+  overflow: hidden;
+}
+
+body {
+  height: var(--doc-height);
+  background: url("../assets/subtle_grunge.png");
 }
 
 #root {
-  background: url("../assets/subtle_grunge.png");
   color: var(--black);
   display: grid;
-  grid-template-rows: min-content 1px 1fr;
-  height: var(--doc-height);
-}
-
-header, main {
-  padding: var(--page-margin-y) var(--page-margin-x);
+  grid-template-rows: 1fr;
+  height: 100%;
 }
 
 main {
   display: grid;
-  grid-auto-rows: min-content;
-  gap: var(--page-margin-y);
+  grid-template-rows: 1fr min-content;
+  overflow-y: auto;
+
+  section {
+    display: flex;
+    gap: var(--gap);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
