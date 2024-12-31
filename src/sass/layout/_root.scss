@@ -1,5 +1,9 @@
+:root {
+  background-color: white;
+}
+
 #root {
-  background-color: var(--black);
+  background: url("../assets/subtle_grunge.png");
   color: var(--black);
   display: grid;
   grid-template-rows: min-content 1px 1fr;
