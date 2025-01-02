@@ -55,6 +55,13 @@ module.exports = {
             "favicon_*.png"
           ),
           to: "assets/[name][ext]"
+        },
+        {
+          from: path.posix.join(
+            path.resolve(__dirname, "src/assets").replace(/\\/g, "/"),
+            "logo-raster-540.jpg"
+          ),
+          to: "assets/[name][ext]"
         }
       ]
     })

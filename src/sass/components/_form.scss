@@ -2,26 +2,74 @@
 
 form {
   position: relative;
+  display: grid;
   background: none;
+  width: 100%;
+  max-width: 540px;
+  gap: 0.4rem;
+  
+  .input-wrapper {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      // background-color: black;
+      // bottom: 10px;
+      inset: 1px;
+      // height: 2px;
+      border: 2px solid black;
+      mix-blend-mode: overlay;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: black;
+      bottom: 10px;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      mix-blend-mode: overlay;
+    }
+  }
 
   input[type="email"],
   input[type="text"] {
     box-sizing: border-box;
     position: relative;
     background: none;
-    border: 1px solid var(--black);
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    max-width: 240px;
+    border: none;
+    padding: var(--gap);
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
   }
 
   button {
     border: none;
     background: none;
     cursor: pointer;
-    // padding: 1rem 2rem;
-    top: 100%;
-    right: 0;
-    display: block;
+    justify-self: end;
+    border-radius: 0;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: .5rem;
+    padding-left: 2rem;
+
+    // top: 100%;
+    // right: 0;
+    display: flex;
+    gap: 1rem;
+    & > span::after {
+      content: "→";
+      margin-left: .75em;
+    }
+  }
+
+  @include break-at("mobile-l") {
+    input[type="email"],
+    input[type="text"] {
+      font-size: 1.4rem;
+    }
   }
 }

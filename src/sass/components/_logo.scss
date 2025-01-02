@@ -1,3 +1,5 @@
+@use "../globals/mixins" as *;
+
 .logo {
   font-size: 2rem;
   font-family: "Switzer";
@@ -13,10 +15,19 @@
   & > *:first-child {
     justify-self: start;
   }
+
 }
 
 #round-logo {
   max-width: 240px;
   mix-blend-mode: overlay;
   margin-bottom: 1rem;
+  .remove-blend-mode {
+    mix-blend-mode: normal;
+    fill: none;
+    stroke-width: 4;
+    stroke: black;
+    opacity: .5;
+  }
+  @include animation("rotate 18s linear infinite")
 }
