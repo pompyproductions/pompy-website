@@ -1,8 +1,8 @@
 @use "mixins" as *;
 
 :root {
-  --page-margin-x: 20px;
-  --page-margin-y: 0;
+  --page-margin-x: .8rem;
+  --page-margin-y: 2rem;
   --padding-x: 1rem;
   --padding-y: 1rem;
   --border-radius: .7rem;
@@ -15,19 +15,13 @@
   }
 }
 
-// .no-margin {
-//   margin-left: 0;
+// .single-margin {
+//   margin-left: var(--page-margin-x);
 // }
-.single-margin {
-  margin-left: var(--page-margin-x);
-}
-.double-margin {
-  margin-left: var(--page-margin-x);
-  // &.both-margins {
-  //   margin-right: var(--page-margin-x)
-  // }
-  @include break-at("mobile-m") {
-    margin-left: calc(var(--page-margin-x) * 2);
+// .double-margin {
+//   margin-left: var(--page-margin-x);
+//   @include break-at("mobile-m") {
+//     margin-left: calc(var(--page-margin-x) * 2);
 
-  }
-}
+//   }
+// }
