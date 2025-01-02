@@ -1,3 +1,5 @@
+@use "../globals/mixins" as *;
+
 .logo {
   font-size: 2rem;
   font-family: "Switzer";
@@ -27,4 +29,5 @@
     stroke: black;
     opacity: .5;
   }
+  @include animation("rotate 18s linear infinite")
 }
