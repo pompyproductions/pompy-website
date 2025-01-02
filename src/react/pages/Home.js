@@ -41,7 +41,9 @@ const Home = () => {
           If you’d like to be informed once the website is up and running, enter your address below, and we’ll get in touch with you!
         </p>
         <form method="POST" action="/api/submit" className="single-margin">
-          <input id="email "type="email" name="email" />
+          <div className="input-wrapper">
+            <input id="email "type="email" name="email" />
+          </div>
           <button type="submit">
             <span>SEND</span>
           </button>
