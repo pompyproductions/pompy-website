@@ -35,7 +35,7 @@ const Home = () => {
         </h1>
         <div className="vsep double-margin"></div>
         <p className="single-margin">
-          For business enquiries & information, please get in touch by sending a mail to info@pompyproductions.com.
+          For business enquiries & information, please get in touch by sending a mail to <a href="mailto:info@pompyproductions.com">info@pompyproductions.com</a>.
         </p>
         <p className="single-margin">
           If you’d like to be informed once the website is up and running, enter your address below, and we’ll get in touch with you!
