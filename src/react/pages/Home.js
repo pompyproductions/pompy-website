@@ -1,11 +1,34 @@
 import React from "react";
-import RoundLogo from "../../assets/round-logo.svg"
+import RoundLogo from "../../assets/round-logo.svg";
 
 const Home = () => {
+
+  function checkBlendModeSupport() {
+    // Create an SVG element dynamically
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.style.mixBlendMode = "overlay";
+
+    // Create a test element in the DOM
+    const testElement = document.createElement("div");
+    testElement.style.position = "absolute";
+    testElement.style.visibility = "hidden";
+    testElement.appendChild(svg);
+    document.body.appendChild(testElement);
+
+    // Check computed style to see if the mix-blend-mode is applied
+    const isSupported =
+      window.getComputedStyle(svg).mixBlendMode === "overlay";
+
+    // Clean up the test element
+    document.body.removeChild(testElement);
+    return isSupported;
+  }
+
+
   return (
     <main>
       <section>
-        <RoundLogo id="round-logo"/>
+        <RoundLogo id="round-logo" className={checkBlendModeSupport() ? "" : "remove-blend-mode"}/>
         <h1 className="single-margin">
           This website is under construction.
         </h1>

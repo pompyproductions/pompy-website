@@ -13,10 +13,18 @@
   & > *:first-child {
     justify-self: start;
   }
+
 }
 
 #round-logo {
   max-width: 240px;
   mix-blend-mode: overlay;
   margin-bottom: 1rem;
+  .remove-blend-mode {
+    mix-blend-mode: normal;
+    fill: none;
+    stroke-width: 4;
+    stroke: black;
+    opacity: .5;
+  }
 }
