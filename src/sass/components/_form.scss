@@ -5,6 +5,7 @@ form {
   display: grid;
   background: none;
   width: 100%;
+  max-width: 540px;
   gap: 0.4rem;
   
   .input-wrapper {
@@ -62,6 +63,13 @@ form {
     & > span::after {
       content: "→";
       margin-left: .75em;
+    }
+  }
+
+  @include break-at("mobile-l") {
+    input[type="email"],
+    input[type="text"] {
+      font-size: 1.4rem;
     }
   }
 }
