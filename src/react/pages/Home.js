@@ -1,5 +1,6 @@
 import React from "react";
 import RoundLogo from "../../assets/round-logo.svg";
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -25,7 +26,7 @@ const Home = () => {
   }
 
 
-  return (
+  return <>
     <main>
       <section>
         <RoundLogo id="round-logo" className={checkBlendModeSupport() ? "" : "remove-blend-mode"}/>
@@ -44,12 +45,9 @@ const Home = () => {
           <button type="submit">SEND →</button>
         </form>
       </section>
-      <div className="logo">
-        <span className="outline-text">POMPY</span>
-        <span className="outline-text">PRODUCTIONS</span>
-      </div>
     </main>
-  )
+    <Footer />
+  </>
 }
 
 export default Home;
