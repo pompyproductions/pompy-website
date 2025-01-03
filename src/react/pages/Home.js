@@ -24,7 +24,27 @@ const Home = () => {
     document.body.removeChild(testElement);
     return isSupported;
   }
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const email = formData.get("email");
 
+    try {
+      const response = await fetch("http://127.0.0.1:8787/api/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email })
+      })
+
+      const result = await response.text();
+      alert(result);
+    } catch (error) {
+      console.error(error);
+      return new Response("Error processing form submission", { status: 500 });
+    }
+  }
 
   return <>
     <main>
@@ -40,7 +60,7 @@ const Home = () => {
         <p className="single-margin">
           If you’d like to be informed once the website is up and running, enter your address below, and we’ll get in touch with you!
         </p>
-        <form method="POST" action="/api/submit" className="single-margin">
+        <form onSubmit={handleFormSubmit} className="single-margin">
           <div className="input-wrapper">
             <input id="email "type="email" name="email" required />
           </div>
