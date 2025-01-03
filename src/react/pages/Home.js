@@ -42,7 +42,7 @@ const Home = () => {
         </p>
         <form method="POST" action="/api/submit" className="single-margin">
           <div className="input-wrapper">
-            <input id="email "type="email" name="email" />
+            <input id="email "type="email" name="email" required />
           </div>
           <button type="submit">
             <span>SEND</span>
